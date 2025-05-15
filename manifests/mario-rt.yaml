@@ -1,0 +1,11 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: myapp-route
+  namespace: mario
+spec:
+  to:
+    kind: Service
+    name: myapp-service
+  port:
+    targetPort: 80
